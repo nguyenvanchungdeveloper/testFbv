@@ -1,0 +1,54 @@
+extends template/template
+block vars
+    - title = 'Thư viện'
+    - menu_active = 'gallery'
+    - wrapper_class = ''
+    - wrapper_id = ''
+    - home_slider = false
+    - banner_top = true
+    - banner_image = 'banner-gallery.jpg'
+    - login = false
+
+append breadcrumb 
+    +breadcrumb({}, title)
+block mainer
+    main.mainer
+        .container-fluid.py-5 
+            .article.mb-5
+                h2.tt-md.text-uppercase.text-center Thư viện Hình ảnh
+                .bg-danger.d-width.mb-45.mx-auto(width="30" height="4")
+                .list-photos.row.row-cols-1.row-cols-sm-2.row-cols-md-4.gy-5
+                    .col.wow.zoomIn: +gallery-item('9.jpg', 'Albumb Team Building HCM')
+                    .col.wow.zoomIn: +gallery-item('2.jpg', 'Albumb Team Building Hà Nội')
+                    .col.wow.zoomIn: +gallery-item('3.jpg', 'Albumb Team Building Huế')
+                    .col.wow.zoomIn: +gallery-item('4.jpg', 'Albumb Team Building Đà Năng')
+                    .col.wow.zoomIn: +gallery-item('5.jpeg', 'Albumb Team Building Sa Pa')
+                    .col.wow.zoomIn: +gallery-item('6.jpg', 'Albumb Team Building Đà Lạt')
+                    .col.wow.zoomIn: +gallery-item('7.jpg', 'Albumb Team Building Phan Thiết')
+                    .col.wow.zoomIn: +gallery-item('8.jpg', 'Albumb Team Building HCM')
+                +pagination2('my-4')
+            .border-top.my-5
+            .article
+                h2.tt-md.text-uppercase.text-center Thư viện Videos
+                .bg-danger.d-width.mb-45.mx-auto(width="30" height="4")
+                //- .video-big.mb-45
+                //-     .mb-4
+                //-         #player(data-plyr-provider="youtube" data-plyr-embed-id="cCudjUHdrBY")
+                //-     .tt-sm.fw-medium Top 10 FREE 2D & 3D Intro Templates 2017 Sony Vegas Pro
+
+                //- list video
+                .list-videos.row.row-cols-2.row-cols-md-3.g-3.g-lg-4
+                    .col.wow.fadeInUp: +video_item('oQX39Q3Lazs', 'Tomorrowland - Around the World 2020 | Official Aftermovie')
+                    .col.wow.fadeInUp: +video_item('oSLL3U8ChUY', 'Top 10 Intro Templates 2021 No Text 3D+2D Free Download After-effect')
+                    .col.wow.fadeInUp: +video_item('4X_IW3kqr3k', 'Top 50 FREE 2D & 3D Intro Templates 2018 Sony Vegas Pro')
+                    .col.wow.fadeInUp: +video_item('ILZ0VhG_tFw', 'Wondershare Filmora Intro template Free Download Link  Intro #1')
+                    .col.wow.fadeInUp: +video_item('QziFwhtq8Hw', 'How to create Cinematic intros for YouTube Tamil Renderforest Tamil')
+                    .col.wow.fadeInUp: +video_item('-sRS_jmqSh0', 'Top 10 FREE 2D & 3D Intro Templates 2017 Sony Vegas Pro')
+                    .col.wow.fadeInUp: +video_item('H1wThic8y_4', 'Free Intro Video Tamil create Cinematic intros for YouTube Tamil')
+                    .col.wow.fadeInUp: +video_item('Alz3PN4rxj4', 'Free download Best 3d Text Animation for 3d text Animated Video and Intro')
+                    .col.wow.fadeInUp: +video_item('Lu_211OZ7Ec', 'Top 10 Intro Templates 2020 No Text 3D & 2D Free Download')
+                +pagination2('my-4')
+
+append scripts 
+    +fancybox()
+    +plyr()

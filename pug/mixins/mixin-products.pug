@@ -1,0 +1,10 @@
+//- mixin products
+mixin pro-item(img, tt)
+    .block.rounded 
+        +a('project-detail.html', 'absolute')
+        .thumb-res.wide-lg.rounded 
+            +img('projects/'+img)(class="fit-cover")
+            .thumb-res-overlay.text-center.d-flex.justify-content-center
+                .tt.text-uppercase=tt
+            
+//- product detail

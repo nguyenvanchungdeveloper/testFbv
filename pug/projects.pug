@@ -1,0 +1,94 @@
+extends template/template
+block vars
+    - title = 'Dự Án FBV'
+    - menu_active = 'projects'
+    - wrapper_class = ''
+    - wrapper_id = ''
+    - home_slider = false
+    - banner_top = true
+    - banner_image = 'banner-projects.jpg'
+    - login = false
+    - bg_footer = 'https://cdn.pixabay.com/photo/2016/11/29/06/22/buildings-1867772_960_720.jpg'
+append breadcrumb 
+    +breadcrumb({'projects.html': 'Dự án'}, title)
+block mainer
+    main.mainer
+        .container-fluid.py-5 
+            h2.tt-md.text-uppercase.text-center.text-secondary=title
+            .nav-filter.d-flex.my-45
+                .nav-filter-item.dropdown
+                    a.btn.form-control.dropdown-toggle#dropdownMenuLink(href="#", role="button", data-bs-toggle="dropdown", aria-expanded="false") Theo tiến độ
+                    ul.dropdown-menu(aria-labelledby="dropdownMenuLink")
+                        li: +a('', 'dropdown-item', 'Đã thi công')
+                        li: +a('', 'dropdown-item', 'Đang thi công')
+                .nav-filter-item.dropdown
+                    a.btn.form-control.dropdown-toggle#dropdownMenuLink(href="#", role="button", data-bs-toggle="dropdown", aria-expanded="false") Theo thời gian
+                    ul.dropdown-menu(aria-labelledby="dropdownMenuLink")
+                        li: +a('', 'dropdown-item', '2020')
+                        li: +a('', 'dropdown-item', '2019')
+                        li: +a('', 'dropdown-item', '2018')
+                        li: +a('', 'dropdown-item', '2017')
+                        li: +a('', 'dropdown-item', '2016')
+                        li: +a('', 'dropdown-item', '2015')
+                .nav-filter-item.dropdown
+                    a.btn.form-control.dropdown-toggle#dropdownMenuLink(href="#", role="button", data-bs-toggle="dropdown", aria-expanded="false") Theo địa điểm
+                    ul.dropdown-menu(aria-labelledby="dropdownMenuLink")
+                        li: +a('', 'dropdown-item', 'Huyện Bình Chánh - TP.HCM')
+                        li: +a('', 'dropdown-item', 'Huyện Cần Giuộc - Tỉnh Long An')
+                        li: +a('', 'dropdown-item', 'Huyện Trảng Bom - Tỉnh Đồng Nai')
+                        li: +a('', 'dropdown-item', 'Quận 12 - TP.HCM')
+                        li: +a('', 'dropdown-item', 'Quận Bình Tân - TP.HCM')
+                        li: +a('', 'dropdown-item', 'Quận Gò Vấp - TP.HCM')
+                        li: +a('', 'dropdown-item', 'Quận Tân Phú - TP.HCM')
+                        li: +a('', 'dropdown-item', 'Quận Thủ Đức - TP.HCM')
+                        li: +a('', 'dropdown-item', 'Dĩ An - Bình Dương')
+            .pjs-section 
+                .pjs-section-item 
+                    .pjs-section-image.wow.fadeInLeft
+                        .thumb-res.wide.mb-0
+                            +a('project-detail.html', 'absolute'): +img('projects/1.jpg')(class="fit-cover")
+                    .pjs-section-text.wow.fadeInRight
+                        +a('project-detail.html', 'absolute')
+                        h3.tt-sm CHUNG CƯ OPAL GARDEN
+                        .desc Vị trí chiến lược chính là yếu tố quan trọng đầu tiên để quyết định sự thành công của một dự án ở hiện tại và tương lai mà Opal Garden hoàn toàn đáp ứng được điều kiện này. Dự án nằm ngay trên đại lộ Phạm Văn Đồng – một trong những tuyến đường nội đô đẹp nhất Sài Gòn, rất thông thoáng và thuận tiện cho việc di chuyển.
+                        .div-more 
+                            span.link-more
+                                | Xem thêm
+                                span.far.fa-chevron-right
+                .pjs-section-item 
+                    .pjs-section-image.wow.fadeInLeft
+                        .thumb-res.wide.mb-0
+                            +a('project-detail.html', 'absolute'): +img('projects/2.jpg')(class="fit-cover")
+                    .pjs-section-text.wow.fadeInRight
+                        +a('project-detail.html', 'absolute')
+                        h3.tt-sm CHUNG CƯ OPAL GARDEN
+                        .desc Vị trí chiến lược chính là yếu tố quan trọng đầu tiên để quyết định sự thành công của một dự án ở hiện tại và tương lai mà Opal Garden hoàn toàn đáp ứng được điều kiện này. Dự án nằm ngay trên đại lộ Phạm Văn Đồng – một trong những tuyến đường nội đô đẹp nhất Sài Gòn, rất thông thoáng và thuận tiện cho việc di chuyển.
+                        .div-more 
+                            span.link-more
+                                | Xem thêm
+                                span.far.fa-chevron-right
+                .pjs-section-item 
+                    .pjs-section-image.wow.fadeInLeft
+                        .thumb-res.wide.mb-0
+                            +a('project-detail.html', 'absolute'): +img('projects/3.jpg')(class="fit-cover")
+                    .pjs-section-text.wow.fadeInRight
+                        +a('project-detail.html', 'absolute')
+                        h3.tt-sm CHUNG CƯ OPAL GARDEN
+                        .desc Vị trí chiến lược chính là yếu tố quan trọng đầu tiên để quyết định sự thành công của một dự án ở hiện tại và tương lai mà Opal Garden hoàn toàn đáp ứng được điều kiện này. Dự án nằm ngay trên đại lộ Phạm Văn Đồng – một trong những tuyến đường nội đô đẹp nhất Sài Gòn, rất thông thoáng và thuận tiện cho việc di chuyển.
+                        .div-more 
+                            span.link-more
+                                | Xem thêm
+                                span.far.fa-chevron-right
+                .pjs-section-item 
+                    .pjs-section-image.wow.fadeInLeft
+                        .thumb-res.wide.mb-0
+                            +a('project-detail.html', 'absolute'): +img('projects/4.jpg')(class="fit-cover")
+                    .pjs-section-text.wow.fadeInRight
+                        +a('project-detail.html', 'absolute')
+                        h3.tt-sm CHUNG CƯ OPAL GARDEN
+                        .desc Vị trí chiến lược chính là yếu tố quan trọng đầu tiên để quyết định sự thành công của một dự án ở hiện tại và tương lai mà Opal Garden hoàn toàn đáp ứng được điều kiện này. Dự án nằm ngay trên đại lộ Phạm Văn Đồng – một trong những tuyến đường nội đô đẹp nhất Sài Gòn, rất thông thoáng và thuận tiện cho việc di chuyển.
+                        .div-more 
+                            span.link-more
+                                | Xem thêm
+                                span.far.fa-chevron-right
+            +pagination2('my-4')

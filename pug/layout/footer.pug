@@ -1,0 +1,104 @@
+
+block footer
+    if bg_footer 
+        footer.footer(style="background-image:url('"+bg_footer+"')")
+            svg.position-absolute.start-0.bottom-100(xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 1920 40" style="enable-background:new 0 0 1920 40;" space="preserve")
+                path.st0(fill="#FF0000" d="M1920.7,26c0,0-589.6,11.5-1115,11.5C303.8,37.5,0.7,0,0.7,0v40h1920V26z")
+                path(fill="#0172bc" d="M0.7,26c0,0,588.6,9,1114,9c501.9,0,806-35,806-35v40H0.7V26z")
+            .container-fluid
+                .row
+                    .footer-col.col-md-6.col-lg-3.footer-info
+                        .footer-tt.tt-xs.text-uppercase Thông tin Liên hệ
+                        h5.tt.fs-15.text-uppercase.text-white=companyName
+                        +contact_info()
+                    .footer-col.col-md-6.col-lg-3.footer-menu-list
+                        .footer-tt.tt-xs.text-uppercase Thông tin công ty
+                        ul.list-style-angle 
+                            li: +a('about.html', '', 'Tổng quan công ty')
+                            li: +a('about.html', '', 'Cơ cấu tổ chức')
+                            li: +a('about.html', '', 'Lịch sử hình thành')
+                            li: +a('about.html', '', 'Cán bộ chủ chốt')
+                            li: +a('about.html', '', 'Năng lực thiết bị thi công')
+                            li: +a('about.html', '', 'Khách hàng & Đối tác')
+                    .footer-col.col-md-6.col-lg-3.d-none.d-md-block
+                        .footer-tt.tt-xs.text-uppercase Tin tức nổi bật
+                        .footer-news
+                            .block.d-flex 
+                                +a('news-detail.html', 'absolute')
+                                .thumb-res: +img('news/1.jpg')(class="fit-cover")
+                                .info: .desc Chuyên gia phong thủy mách nước đầu tư bất động sản 2018
+                            .block.d-flex 
+                                +a('news-detail.html', 'absolute')
+                                .thumb-res: +img('news/2.jpg')(class="fit-cover")
+                                .info: .desc Đất Xanh chi 5.000 tỷ đồng xây dự án hạng sang đầu tiên
+                            .block.d-flex 
+                                +a('news-detail.html', 'absolute')
+                                .thumb-res: +img('news/3.jpg')(class="fit-cover")
+                                .info: .desc Sunshine Group ứng dụng công nghệ trong quản lý dự án
+                    .footer-col.col-md-6.col-lg-3
+                        .footer-tt.tt-xs.text-uppercase Kết nối cộng đồng 
+                        .media-embed
+                        .fb-page(data-href="https://www.facebook.com/FirstBuildingVietnam/" data-width="400" data-hide-cover="false" data-show-facepile="true")
+                            blockquote.fb-xfbml-parse-ignore(cite="https://www.facebook.com/FirstBuildingVietnam/")
+                                a(href="https://www.facebook.com/FirstBuildingVietnam/") Công Ty Cổ Phần Xây Dựng FBV
+            .copyr
+                .container-fluid
+                    .d-md-flex.justify-content-between.align-items-center
+                        .col-left.my-2
+                            | © 2021 <b>!{companyName}</b>. 
+                            span.text-nowrap Powered by 
+                                a(href="//bizmac.com" title="BizMaC, Thiết kế website chuyên nghiệp" target="_blank") BizMaC
+                        .col-right.my-2.d-flex.align-items-center
+                            //- | Lượt truy cập: 1.452  |  Online: 153
+                            +list_social()
+    else 
+        footer.footer
+            svg.position-absolute.start-0.bottom-100(xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 1920 40" style="enable-background:new 0 0 1920 40;" space="preserve")
+                path.st0(fill="#FF0000" d="M1920.7,26c0,0-589.6,11.5-1115,11.5C303.8,37.5,0.7,0,0.7,0v40h1920V26z")
+                path(fill="#0172bc" d="M0.7,26c0,0,588.6,9,1114,9c501.9,0,806-35,806-35v40H0.7V26z")
+            .container-fluid
+                .row
+                    .footer-col.col-md-6.col-lg-3.footer-info
+                        .footer-tt.tt-xs.text-uppercase Thông tin Liên hệ
+                        h5.tt.fs-15.text-uppercase.text-white=companyName
+                        +contact_info()
+                    .footer-col.col-md-6.col-lg-3.footer-menu-list
+                        .footer-tt.tt-xs.text-uppercase Thông tin công ty
+                        ul.list-style-angle 
+                            li: +a('about.html', '', 'Tổng quan công ty')
+                            li: +a('about.html', '', 'Cơ cấu tổ chức')
+                            li: +a('about.html', '', 'Lịch sử hình thành')
+                            li: +a('about.html', '', 'Cán bộ chủ chốt')
+                            li: +a('about.html', '', 'Năng lực thiết bị thi công')
+                            li: +a('about.html', '', 'Khách hàng & Đối tác')
+                    .footer-col.col-md-6.col-lg-3.d-none.d-md-block
+                        .footer-tt.tt-xs.text-uppercase Tin tức nổi bật
+                        .footer-news
+                            .block.d-flex 
+                                +a('news-detail.html', 'absolute')
+                                .thumb-res: +img('news/1.jpg')(class="fit-cover")
+                                .info: .desc Chuyên gia phong thủy mách nước đầu tư bất động sản 2018
+                            .block.d-flex 
+                                +a('news-detail.html', 'absolute')
+                                .thumb-res: +img('news/2.jpg')(class="fit-cover")
+                                .info: .desc Đất Xanh chi 5.000 tỷ đồng xây dự án hạng sang đầu tiên
+                            .block.d-flex 
+                                +a('news-detail.html', 'absolute')
+                                .thumb-res: +img('news/3.jpg')(class="fit-cover")
+                                .info: .desc Sunshine Group ứng dụng công nghệ trong quản lý dự án
+                    .footer-col.col-md-6.col-lg-3
+                        .footer-tt.tt-xs.text-uppercase Kết nối cộng đồng 
+                        .media-embed
+                        .fb-page(data-href="https://www.facebook.com/FirstBuildingVietnam/" data-width="400" data-hide-cover="false" data-show-facepile="true")
+                            blockquote.fb-xfbml-parse-ignore(cite="https://www.facebook.com/FirstBuildingVietnam/")
+                                a(href="https://www.facebook.com/FirstBuildingVietnam/") Công Ty Cổ Phần Xây Dựng FBV
+            .copyr
+                .container-fluid
+                    .d-md-flex.justify-content-between.align-items-center
+                        .col-left.my-2
+                            | © 2021 <b>!{companyName}</b>. 
+                            span.text-nowrap Powered by 
+                                a(href="//bizmac.com" title="BizMaC, Thiết kế website chuyên nghiệp" target="_blank") BizMaC
+                        .col-right.my-2.d-flex.align-items-center
+                            //- | Lượt truy cập: 1.452  |  Online: 153
+                            +list_social()

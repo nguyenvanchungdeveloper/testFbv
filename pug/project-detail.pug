@@ -1,0 +1,86 @@
+extends template/template
+block vars
+    - title = 'Dự Án đã thi công'
+    - menu_active = 'projects'
+    - wrapper_class = ''
+    - wrapper_id = ''
+    - home_slider = false
+    - banner_top = true
+    - banner_image = 'banner-projects.jpg'
+    - login = false
+
+append breadcrumb 
+    +breadcrumb({'projects.html': 'Dự án'}, title)
+block mainer
+    main.mainer
+        .container-fluid.py-5 
+            h2.tt-md.text-uppercase.text-center.text-secondary=title
+            .mb-5.text-center.col-lg-10.col-xxl-7.mx-auto
+                h3.tt-lg.text-uppercase.letter-spacing-n1 Chung cư Saigon Gateway
+                .desc Vị trí chiến lược chính là yếu tố quan trọng đầu tiên để quyết định sự thành công của một dự án ở hiện tại và tương lai mà Opal Garden hoàn toàn đáp ứng được điều kiện này. Dự án nằm ngay trên đại lộ Phạm Văn Đồng – một trong những tuyến đường nội đô đẹp nhất Sài Gòn, rất thông thoáng và thuận tiện cho việc di chuyển.
+            .carousel-gallery.mb-45 
+                .carousel-cell 
+                    +a('css/skin/projects/1.jpg', 'block')(data-fancybox="album01"): +img('projects/1.jpg')
+                .carousel-cell 
+                    +a('css/skin/projects/2.jpg', 'block')(data-fancybox="album01"): +img('projects/2.jpg')
+                .carousel-cell 
+                    +a('css/skin/projects/3.jpg', 'block')(data-fancybox="album01"): +img('projects/3.jpg')
+                .carousel-cell 
+                    +a('css/skin/projects/4.jpg', 'block')(data-fancybox="album01"): +img('projects/4.jpg')
+                .carousel-cell 
+                    +a('css/skin/gallery/5.jpg', 'block')(data-fancybox="album01"): +img('gallery/5.jpg')
+                .carousel-cell 
+                    +a('css/skin/gallery/6.jpg', 'block')(data-fancybox="album01"): +img('gallery/6.jpg')
+                .carousel-cell 
+                    +a('css/skin/gallery/7.jpg', 'block')(data-fancybox="album01"): +img('gallery/7.jpg')
+        .content-detail.container.pb-5 
+            .content-master
+                h3.tt-xs 1. THÔNG TIN TỔNG QUAN
+                p
+                    | - Chủ đầu tư: Công ty CP BĐS Hiệp Phú
+                    br
+                    | - Phát triển dự án: Đất Xanh Miền Nam
+                    br
+                    | - Đơn vị thi công: FBV
+                    br
+                    | - Tổng diện tích: 14.388,9 m2
+                    br
+                    | - Mật độ xây dựng: 33,06%
+                    br
+                    | - Quy mô: 25 tầng
+                    br
+                    | - Diện tích TT: 53.28-55.48 m2 -65.86-69.12-90.78 m2
+                p &nbsp;
+                h3.tt-xs 2. VỊ TRÍ CỬA NGỎ TRUNG TÂM THÀNH PHỐ
+                p Saigon Gateway sở hữu vị trí độc tôn gần KĐT An Phú An Khánh Quận 2, ngay trạm Metro Số 11 mặt tiền đường Song Hành & Xa lộ Hà Nội lộ giới đến 153m- tuyến đường huyết mạch cửa ngõ Phía Đông và là khu vực phát triển nhộn nhịp, hiện đại bậc nhất khu Đông Sài Gòn với hàng loạt những khu đô thị, hạ tầng trọng điểm của TP.HCM được triển khai như tuyến metro Bến Thành Suối Tiên, KĐT An Phú An Khánh, KĐT Thảo Điền, KĐT City Horse, làng đại học Quốc Gia, khu công nghệ cao… đồng thời kết nối với trung tâm KĐT Thủ Thiêm và Quận 1 chỉ trong vài phút di chuyển
+                p &nbsp;
+                h3.tt-xs 3. CUỘC SỐNG HOÀN MỸ
+                p Đến với Saigon Gateway, giá trị cuộc sống của cư dân còn được nâng tầm với hàng hàng loạt tiện ích kề bên như Vincom Quận 9, Vincom Thủ Đức, Siêu thị Co.op Mart, trường anh ngữ Việt Mỹ, ĐH Ngân hàng, ĐH Sư phạm kỹ thuật… cùng các trung tâm thương mại, dịch vụ lớn như Vincom Mega mall, Parkson Cantavil, Golf Rạch Chiếc, Saigon Sports City… chỉ vài phút di chuyển
+                p Đặc biệt là quần thể các công trình, kinh tế, dịch vụ, giáo dục trọng điểm đã và đang được hình thành như làng Đại học Quốc gia TP.HCM, Khu Công Nghệ Cao, Bến Xe Miền Đông (mới), đường cao tốc TP.HCM – Long Thành… không chỉ gia tăng giá trị trong khu vực mà còn góp phần thúc đẩy sự phát triển của thành phố nói chung
+                p &nbsp;
+                h3.tt-xs 4. MỞ LỐI TƯƠNG LAI
+                p Những lo toan và bộ bề của cuộc sống sẽ luôn được gác lại khi chúng ta về với gia đình, do đó đến với Saigon Gateway, bạn không chỉ có thể tận hưởng những dịch vụ cho cá nhân mà còn trải nghiệm những phút giây sum họp bên gia đình khi cùng nhau tận hưởng những tiện ích nội khu có sẵn ngay bên hiên nhà như: Hồ bơi, công viên, khu thể thao, khu thương mại, shophouse, khu vui chơi trẻ em… cùng sự yên tâm tuyệt đối với hệ thống an ninh 3 lớp
+                
+                .social-share.social-stick
+                    span.label Share on
+                    a(href="#" class="btn rounded-circle btn-linkedin fab fa-linkedin-in")
+                    a(href="#" class="btn rounded-circle btn-twitter text-white bi bi-twitter")
+                    a(href="#" class="btn rounded-circle btn-facebook bi bi-facebook")
+                    a(href="news.html" class="btn rounded-circle btn-primary far fa-arrow-left d-none d-md-flex")
+            .related-post.py-45.mt-5 
+                .tt-sm.text-uppercase.text-secondary.text-center.mb-4.block 
+                    span.border-top.border-2.position-absolute.top-50.w-100.start-0.z-index-n1
+                    span.bg-white.px-3 Các Dự án khác
+                .grid-projects.row.row-cols-2.row-cols-md-3.g-2.g-lg-4.mb-xl-3
+                    .col: +pro-item('projects_01.jpg', 'Chung cư Opal Garden')
+                    .col: +pro-item('projects_03.jpg', 'Dự án căn hộ High Intela Quận 8')
+                    .col: +pro-item('projects_05.jpg', 'CĂN HỘ SAIGON INTELA BÌNH CHÁNH')
+                    .col: +pro-item('projects_11.jpg', 'Chung cư Opal Garden')
+                    .col: +pro-item('projects_13.jpg', 'Dự án căn hộ High Intela Quận 8')
+                    .col: +pro-item('projects_15.jpg', 'CĂN HỘ SAIGON INTELA BÌNH CHÁNH')
+                .text-center.mt-4
+                    +a('projects.html', 'btn btn-gray px-5')
+                        | Xem thêm
+                        span.far.fa-long-arrow-down.ml-2
+append scripts
+    +fancybox()

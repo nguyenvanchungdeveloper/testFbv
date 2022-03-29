@@ -1,0 +1,56 @@
+extends template/template
+block vars
+    - title = 'Tuyển dụng'
+    - menu_active = 'recruitment'
+    - wrapper_class = ''
+    - wrapper_id = ''
+    - home_slider = false
+    - banner_top = true
+    - banner_image = 'banner-recruitment.jpg'
+    - login = false
+
+append breadcrumb 
+    +breadcrumb({}, title)
+block mainer
+    main.mainer
+        .container.py-5 
+            //-  mixin recruitment
+            mixin recruitment-item(tt, salary)
+                .block
+                    +a('recruitment-detail.html', 'absolute')
+                    .tt=tt
+                    .desc.d-flex.flex-wrap.align-items-center
+                        if salary 
+                            .mr-4.salary
+                                span.mr-2.far.fa-money-bill
+                                | 9 - 12 triệu
+                        else 
+                            .mr-4.salary 
+                                span.mr-2.far.fa-money-bill 
+                                | Thỏa thuận
+                        .mr-4.date.text-muted
+                            span.mr-2.far.fa-calendar-alt 
+                            | 28/02/2022
+            h2.tt-lg.text-uppercase.tt-ss.text-secondary.text-center Tuyển dụng 
+            .block-sidebar(data-wrapper)
+                .mainbody.mb-4.mb-md-0(data-mainbody)
+                    .list-recruitment.row.row-cols-1.row-cols-md-2.mb-45
+                        .col: +recruitment-item('Bảo Vệ - Kiểm Soát Hàng Hóa (Làm Việc Theo Ca Tại Q5)', '7 - 9 triệu')
+                        .col: +recruitment-item('Lao Động Phổ Thông Làm Việc Tại Kcx Tân Thuận Quận 7', '')
+                        .col: +recruitment-item('Nhân Viên Digital Marketing Online', '')
+                        .col: +recruitment-item('Nhân viên giao nhận hàng hóa fulltime', '')
+                        .col: +recruitment-item('Bảo Vệ - Kiểm Soát Hàng Hóa (Làm Việc Theo Ca Tại Q5)', '7 - 9 triệu')
+                        .col: +recruitment-item('Lao Động Phổ Thông Làm Việc Tại Kcx Tân Thuận Quận 7', '')
+                        .col: +recruitment-item('Nhân Viên Digital Marketing Online', '')
+                        .col: +recruitment-item('Nhân viên giao nhận hàng hóa fulltime', '')
+                .sidebar(data-sidebar)
+                    div(data-stick data-width-fill)
+                        .pane.pane-menu.mb-3
+                            .tt-xs.text-uppercase Danh mục Tuyển dụng
+                            ul.menu-vertical 
+                                li.active: +a('recruitment.html', '', 'DM Tuyển dụng 01')
+                                li: +a('recruitment.html', '', 'DM Tuyển dụng 02')
+                                li: +a('recruitment.html', '', 'DM Tuyển dụng 03')
+                                li: +a('recruitment.html', '', 'DM Tuyển dụng 04')
+                        .pane.bannerqc
+                            +a('#', 'block mb-3'): +img('theme/banner-1.jpg')

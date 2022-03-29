@@ -1,0 +1,207 @@
+.nav-cate {
+    text-align: center;
+    margin-bottom: 1.25rem;
+    &-link {
+        display: inline-block;
+        vertical-align: top;
+        text-transform: uppercase;
+        font-weight: 500;
+        background: #f7f7f7;
+        color: $body-color;
+        letter-spacing: -.5px;
+        padding: .675rem 1.25rem;
+        margin-right: .5rem;
+        border-radius: 6px;
+        margin-bottom: .5rem;
+        font-size: 15px;
+        
+        &.active {
+            background: $secondary;
+            color: #fff;
+        }
+    }
+}
+.nav-filter {
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+    justify-content: center;
+    &-item {
+        margin: 0 .25rem .5rem;
+    }
+    .dropdown-toggle {
+        text-transform: uppercase;
+        font-size: 15px;
+        background: rgba($primary,.15);
+        color: darken($primary, 15%);
+        padding: .5rem 1.125rem;
+        &:focus {
+            background: #fff;
+        }
+        &:hover {
+            background: rgba($primary, .1);
+            box-shadow: 0 5px 20px -5px rgba($primary,.1);
+        }
+    }
+    .dropdown-menu {
+        min-width: 100%;
+        max-height: 360px;
+        overflow: hidden;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        box-shadow: 0 5px 25px -5px rgba(#000,.1);
+    }
+}
+.dropdown-toggle {
+    font-weight: 500;
+    &:after {
+        width: auto;
+        height: auto;
+        content: '\f107';
+        font-family: 'Font awesome 5 pro';
+        font-weight: 400;
+        border: none;
+        vertical-align: initial;
+    }
+}
+.pjs-section {
+    &-item {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        margin-bottom: 2.5rem;
+    }
+    &-text {
+        padding-top: 1.25rem;
+        position: relative;
+    }
+    .tt-sm:after,
+    &-image {
+        transition: all 0.4s ease;
+    }
+    .tt-sm {
+        color: #3e527c;
+        letter-spacing: -1px;
+        &:after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: $primary;
+            margin: 5px 0 1rem;
+        }
+    }
+    .desc {
+        @include ellips(5);
+        color: $desc;
+        text-align: justify;
+        * {
+            display: inline;
+        }
+    }
+    .div-more {
+        margin-top: .75rem;
+    }
+    .link-more {
+        font-weight: 500;
+        text-decoration: underline;
+        color: $primary;
+    }
+    .thumb-res {
+        border-radius: $border-radius;
+    }
+    &-text:hover {
+        .tt-sm {
+            color: darken($primary, 5%);
+            &:after {
+                background: $secondary;
+                width: 65px;
+            }
+        }
+        .link-more {
+            color: $secondary;
+            text-decoration: none;
+            .far {
+                margin-left: .75rem;
+            }
+        }
+    }
+    &-image:hover {
+        box-shadow: 0 14px 40px -14px rgba(#000,.15);
+        transform: translateY(-3px);
+    }
+}
+@include media-breakpoint-up(md) {
+    .pjs-section {
+        &-item {
+            flex-direction: row;
+            &:nth-of-type(2n) {
+                flex-direction: row-reverse;
+                
+            }
+        }
+        &-image {
+            width: 57%;
+            flex: 0 0 auto;
+        }
+        &-text {
+            width: 43%;
+            flex: 0 0 auto;
+            padding-left: 5%;
+            padding-top: 0;
+            .pjs-section-item:nth-child(2n) & {
+                padding-left: 0;
+                padding-right: 5%;
+                text-align: right;
+
+                .tt-sm:after {
+                    margin-left: auto;
+                }
+            }
+        }
+    }
+}
+@include media-breakpoint-up(lg) {
+    .pjs-section {
+        --tt-sm: 1.5rem;
+        .tt-sm {
+            letter-spacing: -1.5px;
+            &:after {
+                margin-bottom: 1.5rem;
+            }
+        }
+        .desc {
+            line-height: 1.6;
+        }
+        &-text {
+            padding-top: 1.5rem;
+            
+        }
+    }
+}
+@include media-breakpoint-up(xl) {
+    .pjs-section {
+        --tt-sm: calc(1.5rem + .675vw);
+        &-text {
+            padding-right: 3%;
+            padding-top: 3%;
+            .pjs-section-item:nth-child(2n) & {
+                padding-right: 5%;
+                padding-left: 3%;
+            }
+        }
+        .div-more {
+            margin-top: 1.25rem;
+        }
+        .desc {
+            @include ellips(6);
+            line-height: 1.65;
+        }
+    }
+}
+@include media-breakpoint-up(xxl) {
+    .pjs-section {
+        &-text {
+            padding-right: 4%;
+        }
+    }
+}

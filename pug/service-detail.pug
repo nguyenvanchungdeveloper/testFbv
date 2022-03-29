@@ -1,0 +1,89 @@
+extends template/template
+block vars
+    - title = 'Dịch Vụ'
+    - menu_active = 'services'
+    - wrapper_class = ''
+    - wrapper_id = ''
+    - home_slider = false
+    - banner_top = true
+    - banner_image = 'banner-services.jpg'
+    - login = false
+
+append breadcrumb 
+    +breadcrumb({}, title)
+block mainer
+    main.mainer
+        .container.py-5 
+            .block-sidebar(data-wrapper)
+                .mainbody.mb-4.mb-md-0(data-mainbody)
+                    h2.tt-lg.tt-post He needed 72 operations, but Paralympian says 'body and mind is stronger than you can imagine'
+                    hr
+                    .desc.fs-18.mb-4.text-dark
+                        | Microsoft vừa mới ra mắt phiên bản Windows 11 Preview đầu tiên cho người dùng trải nghiệm sớm. Những người dùng tham gia chương trình Windows Insiders có thể tải về bản Windows 11 Preview ngay bây giờ.
+                    .content-post
+                        p: +img("news/large-02.jpg")
+                        p &nbsp;
+                        p: Tuy nhiên tính năng mà người dùng rất mong đợi được trải nghiệm, đó là chạy các ứng dụng Android trên Windows 11, thì lại chưa có trong phiên bản Preview này. Ứng dụng Microsoft Team cũng chưa được tích hợp. Các tính năng này vẫn đang được Microsoft thử nghiệm và có thể sẽ ra mắt trong các phiên bản Windows 11 Preview sau này. 
+                        p &nbsp;
+                        p Microsoft cũng đại tu phần Settings chính của Windows 11. Bản Preview này bao gồm những thay đổi giúp người dùng dễ dàng tìm được những cài đặt cần thiết. Phần Settings sẽ có menu bên trái được cố định, giúp chuyển đổi qua lại giữa các phần cài đặt nhanh chóng hơn.
+                        p Bên cạnh bản Preview của Windows 11 ra mắt ngày hôm nay, Microsoft cũng giới thiệu bản Preview của bộ phần mềm Office mới. Giao diện của bộ phần mềm Office mới cũng có thay đổi, các góc cũng được bo tròn để giống với các cửa sổ của Windows 11. 
+                        p Nếu bạn muốn tải về phiên bản Windows 11 Preview này, bạn có thể đăng ký chương trình Windows Insiders tại đây. Sau đó trên Windows 10, vào phần  Settings > Update & Security > Windows Insider Program. Nếu chiếc PC của bạn đáp ứng được yêu cầu của Microsoft, sẽ có tùy chọn để tải về bản Windows 11 Preview này.
+                        p Bạn có thể tải ứng dụng PC Health Check của Microsoft tại đây, để kiểm tra xem chiếc PC của bạn có đáp ứng được yêu cầu tối thiểu để cài đặt Windows 11 hay không.
+                        p: strong: em Tham khảo: theverge
+
+                    .other-post.mt-45
+                        .d-flex.align-items-center.justify-content-between.mb-3
+                            .tt-sm.text-uppercase.text-secondary.my-1 Dịch vụ khác
+                            span.border-top.mx-3.flex-fill
+                            +a('news.html', 'link-more text-decoration-none')
+                                | Xem thêm
+                                i.far.fa-chevron-right
+                        .list-services.row
+                            .col-md-6.col-lg-4.mb-45
+                                .block 
+                                    +a('service-detail.html', 'absolute')
+                                    .thumb-res.wide.rounded-3: +img('services/1.jpg')(class="fit-cover")
+                                    .info.px-0
+                                        .tt.fw-medium.fs-16.text-uppercase Tư vấn thiết kế trọn gói
+                            .col-md-6.col-lg-4.mb-45
+                                .block 
+                                    +a('service-detail.html', 'absolute')
+                                    .thumb-res.wide.rounded-3: +img('services/2.jpg')(class="fit-cover")
+                                    .info.px-0
+                                        .tt.fw-medium.fs-16.text-uppercase Tư vấn thiết kế nhà
+                            .col-md-6.col-lg-4.mb-45
+                                .block 
+                                    +a('service-detail.html', 'absolute')
+                                    .thumb-res.wide.rounded-3: +img('services/3.jpg')(class="fit-cover")
+                                    .info.px-0
+                                        .tt.fw-medium.fs-16.text-uppercase Tư vấn thiết kế căn hộ
+                            .col-md-6.col-lg-4.mb-45
+                                .block 
+                                    +a('service-detail.html', 'absolute')
+                                    .thumb-res.wide.rounded-3: +img('services/4.jpg')(class="fit-cover")
+                                    .info.px-0
+                                        .tt.fw-medium.fs-16.text-uppercase Tư vấn bản vẽ thiết kế
+                            .col-md-6.col-lg-4.mb-45
+                                .block 
+                                    +a('service-detail.html', 'absolute')
+                                    .thumb-res.wide.rounded-3: +img('services/5.jpg')(class="fit-cover")
+                                    .info.px-0
+                                        .tt.fw-medium.fs-16.text-uppercase Thi công xây dựng
+                            .col-md-6.col-lg-4.mb-45
+                                .block 
+                                    +a('service-detail.html', 'absolute')
+                                    .thumb-res.wide.rounded-3: +img('services/6.jpg')(class="fit-cover")
+                                    .info.px-0
+                                        .tt.fw-medium.fs-16.text-uppercase Dịch vụ thiết kế trọn gói
+
+                .sidebar(data-sidebar)
+                    div(data-stick data-width-fill)
+                        .pane.pane-menu.mb-4
+                            .tt-xs.text-uppercase Danh mục Dịch vụ
+                            ul.menu-vertical 
+                                li.active: +a('services.html', '', 'Khảo sát, sửa chữa')
+                                li: +a('services.html', '', 'Tư vấn kiến trúc')
+                                li: +a('services.html', '', 'Tư vấn thiết kế')
+                                li: +a('services.html', '', 'Thi công xây dựng')
+                        .pane.bannerqc
+                            +a('#', 'block'): +img('theme/banner-1.jpg')

@@ -1,0 +1,126 @@
+extends template/template
+block vars
+    - title = 'Tuyển dụng'
+    - menu_active = 'recruitment'
+    - wrapper_class = ''
+    - wrapper_id = ''
+    - home_slider = false
+    - banner_top = true
+    - banner_image = 'banner-recruitment.jpg'
+    - login = false
+
+append breadcrumb 
+    +breadcrumb({}, title)
+block mainer
+    main.mainer
+        .container.py-5 
+            .block-sidebar(data-wrapper)
+                .mainbody.mb-4.mb-md-0(data-mainbody)
+                    .tt-lg.mb-3 [Tuyển dụng] Nhân viên kinh doanh làm việc Online tại nhà
+                    .desc-box.d-flex.flex-wrap.justify-content-between
+                        .desc-box-item.flex-fill 
+                            .picon
+                                span.far.fa-calendar-alt
+                                | Thời hạn nộp hồ sơ: <b>20/05/2022</b>
+                                
+                        .desc-box-item.flex-fill 
+                            .picon
+                                span.far.fa-user-circle
+                                | Số lượng: <b>2</b>
+                    .content.px-3
+                        .tt.text-facebook.text-uppercase Mô tả công việc
+                        ul.order-list-icon.mb-5(data-list-icon="bi bi-check-all text-success")
+                            li Thiết lập mối quan hệ, mở rộng mạng lưới khách hàng tiềm năng
+                            li Đánh giá cơ hội, khách hàng tiềm năng để đề xuất phương pháp, cách thức tiếp cận khách hàng hiệu quả
+                            li Quản lý & duy trì các mối quan hệ hiện có, chăm sóc khách hàng thường xuyên
+                            li Đề xuất, tư vấn giải pháp công nghệ phù hợp với nhu cầu khách hàng. Theo dõi, hỗ trợ trong quá trình khách hàng tìm hiểu, dùng thử, chốt đơn
+                            li Phối hợp với các bộ phận khác trong quá trình làm việc
+                            li Thực hiện các công việc khác theo phân công của cấp Quản lý.
+                        .tt.text-facebook.text-uppercase Yêu cầu công việc
+                        ul.order-list-icon.mb-5(data-list-icon="bi bi-check-all text-success")
+                            li Tốt nghiệp Đại học Khối ngành Kinh tế, Quản trị Kinh doanh, CNTT, Khoa học máy tính, Khoa học dữ liệu,...
+                            li Tiếng Anh giao tiếp và đọc hiểu lưu loát
+                            li Khả năng giao tiếp, trình bày thuyết phục, thuyết trình và làm việc nhóm tốt
+                            li Có kỹ năng quản lý thời gian, lập kế hoạch công việc cá nhân
+                            li Có tinh thần trách nhiệm, chịu áp lực công việc
+                        .tt.text-facebook.text-uppercase Kinh nghiệm
+                        ul.order-list-icon.mb-5(data-list-icon="bi bi-check-all text-success")
+                            li Có ít nhất 01 năm kinh nghiệm trong lĩnh vực bán hàng
+                        .tt.text-facebook.text-uppercase Quyền lợi được hưởng
+                        ul.order-list-icon.mb-5(data-list-icon="bi bi-check-all text-success")
+                            li Hưởng đầy đủ các chế độ theo Luật lao động Việt Nam (BHXH, BHYT, BHTN,...)
+                            li Chế độ nghỉ phép 18 ngày/năm
+                            li Chế độ khám sức khỏe định kỳ
+                    .apply-box.my-45
+                        .tt-sm.text-uppercase.mb-3 Ứng tuyển công việc này
+                        .desc.mb-4.text-desc Cảm ơn bạn đã gửi CV tham gia ứng tuyển công việc này.
+                        form.form-validate.material-form
+                            .row.gx-3
+                                .col-lg-6
+                                    .form-group.mb-3
+                                        input.form-control(type="text" required)
+                                        label.label-text Họ & Tên
+                                .col-lg-6
+                                    .form-group.mb-3
+                                        input.form-control(type="email" required)
+                                        label.label-text Email
+                                .col-lg-6 
+                                    .form-group.mb-3
+                                        input.form-control(type="tel")
+                                        label.label-text Điện thoại
+                                .col-lg-6
+                                    .form-group.mb-3
+                                        input.form-control(type="text" required)
+                                        label.label-text Tiêu đề
+                                .col-12
+                                    .form-group.mb-3
+                                        textarea.form-control(rows="5" required)
+                                        label.label-text Nội dung
+                                .col-12 
+                                    .custom-inputfile.mb-3
+                                        input(type="file" name="file-1[]" id="file-1" class="input--file" data-multiple-caption="{count} files selected" multiple)
+                                        label(for="file-1" class="button--file btn btn-outline-gray text-desc")
+                                            svg(xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17")
+                                                path(fill="#454545" d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z")
+                                            span Đính kèm CV
+                                .col-12.text-center
+                                    .d-flex.flex-wrap.align-items-center
+                                        div(class="g-recaptcha my-2 mr-3" data-sitekey="6LcbK98UAAAAALQI9rCCE3Vlm5LZtCt_Fdo7V4Wc")
+                                        button(type="submit" class="btn btn-primary px-4") Gửi ứng tuyển
+                .sidebar(data-sidebar)
+                    div(data-stick data-width-fill)
+                        .pane.pane-menu.mb-3
+                            .tt-xs.text-uppercase Danh mục Tuyển dụng
+                            ul.menu-vertical 
+                                li.active: +a('recruitment.html', '', 'DM Tuyển dụng 01')
+                                li: +a('recruitment.html', '', 'DM Tuyển dụng 02')
+                                li: +a('recruitment.html', '', 'DM Tuyển dụng 03')
+                                li: +a('recruitment.html', '', 'DM Tuyển dụng 04')
+                        .pane.bannerqc
+                            +a('#', 'block mb-3'): +img('theme/banner-1.jpg')
+append scripts
+    script(src="https://www.google.com/recaptcha/api.js")
+    +parsley()
+    script.
+        'use strict';
+        ;( function ( document, window, index ){
+            var inputs = document.querySelectorAll( '.input--file' );
+            Array.prototype.forEach.call( inputs, function( input ){
+                var label    = input.nextElementSibling,
+                    labelVal = label.innerHTML;
+                input.addEventListener( 'change', function( e ){
+                    var fileName = '';
+                    if( this.files && this.files.length > 1 )
+                        fileName = ( this.getAttribute( 'data-multiple-caption' ) || '' ).replace( '{count}', this.files.length );
+                    else
+                        fileName = e.target.value.split( '\\' ).pop();
+                    if( fileName )
+                        label.querySelector( 'span' ).innerHTML = fileName;
+                    else
+                        label.innerHTML = labelVal;
+                });
+                input.addEventListener( 'focus', function(){ input.classList.add( 'has-focus' ); });
+                input.addEventListener( 'blur', function(){ input.classList.remove( 'has-focus' ); });
+            });
+        }( document, window, 0 ));
+        $(function(){$(".form-validate").parsley();});

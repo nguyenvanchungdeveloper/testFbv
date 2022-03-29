@@ -1,0 +1,38 @@
+block header
+    header.header#header
+        .container-fluid.d-flex
+            a.logo-full(href="index.html" title="" alt="")
+                img.logo(src="css/skin/logo.png" alt="")
+                span.brandname CÔNG TY CỔ PHẦN XÂY DỰNG FBV
+            .header-right.d-flex
+                .header-right-item.hotline
+                    +phone_a('icon-group d-flex align-items-center')
+                        span.icon.fa.fa-phone.fa-flip-horizontal
+                        span.text.lh-1.ml-2
+                            span.fw-medium.block.fs-12 Hotline
+                            b.b
+                                +phone_text()
+                .header-right-item.email
+                    +mail_a('icon-group d-flex align-items-center')
+                        span.icon.fa.fa-envelope
+                        span.text.lh-1.ml-2
+                            span.fw-medium.block.fs-12 Email
+                            b.b
+                                +mail_text()
+                .header-right-item.search
+                    button.icon-group.d-flex.align-items-center.search-toggle#search-toggle(role="button" type="button")
+                        span.icon.fa.fa-search
+                .header-right-item.dropdown-language.d-flex
+                    +a('', 'icon icon-language')
+                        span.flag.rounded-circle.block-bg.vi(style="background-image: url('css/skin/vietnam.png');")
+                    +a('', 'icon icon-language ml-2')
+                        span.flag.rounded-circle.block-bg.vi(style="background-image: url('css/skin/us.png');")
+            .form-search#form-search
+                .form-group
+                    input(type="text" class="form-control" placeholder="Tìm kiếm")
+                    button(type="button" class="icon-submit"): span.far.fa-search
+
+            button#menu-toggle.btn-menu.fa.fa-bars(role="button")
+                b Menu
+        block menu
+            include menu 

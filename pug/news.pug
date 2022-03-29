@@ -1,0 +1,78 @@
+extends template/template
+block vars
+    - title = 'Tin Tức'
+    - menu_active = 'news'
+    - wrapper_class = ''
+    - wrapper_id = ''
+    - home_slider = false
+    - banner_top = true
+    - banner_image = 'banner-news.jpg'
+    - login = false
+
+append breadcrumb 
+    +breadcrumb({}, title)
+block mainer
+    main.mainer
+        .container.py-5 
+            .block-sidebar(data-wrapper)
+                .mainbody.mb-4.mb-md-0(data-mainbody)
+                    .grid-news.mb-45
+                        .grid-news-item
+                            .block
+                                +a('news-detail.html', 'absolute')
+                                .thumb-res.wide: +img("news/1.jpg")(class="fit-cover")
+                                .info 
+                                    .tt=news1
+                        .grid-news-item
+                            .block
+                                +a('news-detail.html', 'absolute')
+                                .thumb-res.wide: +img("news/2.jpg")(class="fit-cover")
+                                .info 
+                                    .tt=news2
+                        .grid-news-item
+                            .block
+                                +a('news-detail.html', 'absolute')
+                                .thumb-res.wide: +img("news/3.jpg")(class="fit-cover")
+                                .info 
+                                    .tt=news3
+                    .list-news.row
+                        .col-12: +news-item('4.jpg', news4, desc4)
+                        .col-12: +news-item('5.jpg', news5, desc5)
+                        .col-12: +news-item('1.jpg', news1, desc1)
+                        .col-12: +news-item('2.jpg', news2, desc2)
+                        .col-12: +news-item('3.jpg', news3, desc3)
+                        .col-12: +news-item('1.jpg', news6, desc6)
+                    +pagination2('my-3')
+
+                .sidebar(data-sidebar)
+                    div(data-stick data-width-fill)
+                        .pane.bannerqc
+                            +a('#', 'block'): +img('theme/banner-1.jpg')
+                        .pane.pane-menu.mb-4
+                            .tt-xs.text-uppercase Danh mục tin
+                            ul.menu-vertical 
+                                li.active: +a('news.html', '', 'Tin công ty')
+                                li: +a('news.html', '', 'Tin công trình')
+                                li: +a('news.html', '', 'Tin thị trường')
+                        .pane.pane-list
+                            .tt-xs.text-uppercase Tin xem nhiều 
+                            .pane-list-item.d-flex.block 
+                                +a('news-detail.html', 'absolute')
+                                .thumb: +img('news/1.jpg')(class="fit-cover")
+                                .info 
+                                    .tt=news1
+                            .pane-list-item.d-flex.block 
+                                +a('news-detail.html', 'absolute')
+                                .thumb: +img('news/2.jpg')(class="fit-cover")
+                                .info 
+                                    .tt=news2
+                            .pane-list-item.d-flex.block 
+                                +a('news-detail.html', 'absolute')
+                                .thumb: +img('news/3.jpg')(class="fit-cover")
+                                .info 
+                                    .tt=news3
+                            .pane-list-item.d-flex.block 
+                                +a('news-detail.html', 'absolute')
+                                .thumb: +img('news/4.jpg')(class="fit-cover")
+                                .info 
+                                    .tt=news4

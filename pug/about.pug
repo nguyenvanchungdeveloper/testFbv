@@ -1,0 +1,58 @@
+extends template/template
+block vars
+    - title = 'Tổng quan công ty'
+    - menu_active = 'about'
+    - wrapper_class = ''
+    - wrapper_id = ''
+    - home_slider = false
+    - banner_top = true
+    - banner_image = 'banner-about.jpg'
+    - login = false
+    - bg_footer = 'https://cdn.pixabay.com/photo/2016/11/02/10/04/chicago-1791002_960_720.jpg'
+append breadcrumb 
+    +breadcrumb({}, title)
+block mainer
+    main.mainer
+        .container.py-5 
+            .block-sidebar(data-wrapper)
+                .mainbody.mb-4.mb-md-0(data-mainbody)
+                    h2.tt-md.text-uppercase.text-secondary.letter-spacing-n1=title
+                    .text-primary.fs-18.fw-medium Công ty Cổ phần xây dựng FBV được thành lập ngày 19/04/2011 với lĩnh vực hoạt động chính là Tổng thầu thiết kế và thi công các công trình vừa và lớn.
+                    p.py-45: img(src="https://fbv.vn/wp-content/uploads/2020/05/Untitled-1-2048x781.png" alt="")
+                    p Là một thành viên của Tập đoàn Đất Xanh, FBV thừa hưởng những giá trị kết tinh tốt đẹp nhất của một tập đoàn tư nhân hàng đầu Việt Nam, đang ngày càng phát triển cùng với sự lớn mạnh chung của tập đoàn.
+                    p FBV sở hữu nguồn nhân lực đầy nhiệt huyết, có năng lực, kinh nghiệm và sự cầu tiến. Chúng tôi luôn chú trọng tạo dựng môi trường làm việc năng động, đoàn kết, sáng tạo, phát huy tối đa khả năng của nhân viên, mang lại hiệu quả công việc cao nhất.
+                    p FBV cũng không ngừng bồi dưỡng, nâng cao trình độ cho cán bộ công nhân viên, phát triển nguồn nhân lực chuyên nghiệp nhằm đáp ứng nhu cầu kỹ thuật và thẩm mĩ ngày càng cao của Chủ đầu tư.
+                    .my-4
+                        +a('', 'btn btn-primary', 'Download Profile Công Ty')
+                    .row.my-45
+                        .col-md-4.mb-45
+                            .block.rounded-3
+                                .thumb-res.wide
+                                    img.fit-cover(src="css/skin/theme/vision.jpg", alt)
+                                .tt-xs.text-uppercase.text-danger.mb-3 Vision Statement
+                                p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                        .col-md-4.mb-45
+                            .block.rounded-3
+                                .thumb-res.wide
+                                    img.fit-cover(src="css/skin/theme/mission.jpg", alt)
+                                .tt-xs.text-uppercase.text-danger.mb-3 Mission Statement
+                                p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                        .col-md-4.mb-45
+                            .block.rounded-3
+                                .thumb-res.wide
+                                    img.fit-cover(src="css/skin/theme/value.jpg", alt)
+                                .tt-xs.text-uppercase.text-danger.mb-3 Core Values
+                                p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                .sidebar(data-sidebar)
+                    div(data-stick data-width-fill)
+                        .pane.pane-menu.mb-4
+                            .tt-xs.text-uppercase Giới thiệu
+                            ul.menu-vertical 
+                                li.active: +a('about.html', '', 'Tổng quan công ty')
+                                li: +a('about.html', '', 'Cơ cấu tổ chức')
+                                li: +a('about.html', '', 'Lịch sử hình thành')
+                                li: +a('about.html', '', 'Cán bộ chủ chốt')
+                                li: +a('about.html', '', 'Năng lực thiết bị thi công')
+                                li: +a('about.html', '', 'Khách hàng & Đối tác')
+                        .pane.bannerqc
+                            +a('#', 'block'): +img('theme/banner-1.jpg')

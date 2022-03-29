@@ -1,0 +1,74 @@
+block menu
+    nav.navigate-dym#navigate
+        .menu
+            .menu-header
+                .tt.mb-0.text-uppercase.text-secondary Menu danh mục
+                button.btn-close#close-menu(type="button")
+            .menu-body
+                ul.menu-slide
+                    li(class=(menu_active=='index' ? 'active' : ''))
+                        a(href="index.html" title="" alt="" target="_self")
+                            span.menu-icon.far.fa-home
+                            | Trang chủ
+                    li(class=(menu_active=='about' ? 'active' : ''))
+                        a(href="about.html" title="" alt="" target="_self")
+                            span.menu-icon.far.fa-user-circle
+                            | Giới thiệu
+                    li(class=(menu_active=='services' ? 'active' : ''))
+                        a(href="services.html" title="" alt="")
+                            span.menu-icon.far.fa-cog
+                            | Dịch vụ
+                        ul.menu-slide-sub
+                            li: a(href="services.html" title="" alt="" target="_self") Khảo sát, sửa chữa
+                            li: a(href="services.html" title="" alt="" target="_self") Tư vấn kiến trúc
+                            li: a(href="services.html" title="" alt="" target="_self") Tư vấn thiết kế
+                            li: a(href="services.html" title="" alt="" target="_self") Thi công xây dựng
+                    li(class=(menu_active=='projects' ? 'active' : ''))
+                        a(href="projects.html" title="" alt="")
+                            span.menu-icon.far.fa-briefcase
+                            | Dự án
+                        ul.menu-slide-sub
+                            li: a(href="projects.html" title="" alt="" target="_self") Đã thi công
+                            li: a(href="projects.html" title="" alt="" target="_self") Đang thi công
+                    li(class=(menu_active=='news' ? 'active' : ''))
+                        a(href="news.html" title="" alt="" target="_self")
+                            span.menu-icon.far.fa-money-check
+                            | Tin tức
+                        ul.menu-slide-sub
+                            li: a(href="news.html" title="" alt="" target="_self") Tin công ty
+                            li: a(href="news.html" title="" alt="" target="_self") Tin công trình
+                            li: a(href="news.html" title="" alt="" target="_self") Tin thị trường
+                    li(class=(menu_active=='gallery' ? 'active' : ''))
+                        a(href="gallery.html" title="" alt="" target="_self")
+                            span.menu-icon.far.fa-th-large
+                            | Thư viện
+                        ul.menu-slide-sub
+                            li: a(href="gallery.html" title="" alt="" target="_self") Thư viện Hình ảnh
+                            li: a(href="gallery.html" title="" alt="" target="_self") Thư viện Video
+                    li(class=(menu_active=='recruitment' ? 'active' : ''))
+                        a(href="recruitment.html" title="" alt="" target="_self")
+                            span.menu-icon.far.fa-id-card
+                            | Tuyển dụng
+                        ul.menu-slide-sub
+                            li: +a('recruitment.html', '', 'DM Tuyển dụng 01')
+                            li: +a('recruitment.html', '', 'DM Tuyển dụng 02')
+                            li: +a('recruitment.html', '', 'DM Tuyển dụng 03')
+                            li: +a('recruitment.html', '', 'DM Tuyển dụng 04')
+                    li(class=(menu_active=='contact' ? 'active' : ''))
+                        a(href="contact.html" title="" alt="" target="_self")
+                            span.menu-icon.far.fa-id-card-alt
+                            | Liên hệ
+            .menu-footer
+                .fs-14.text-uppercase.fw-medium.mb-2 Thông tin Liên hệ
+                .p-icon 
+                    i.mr-3.far.fa-phone.fa-flip-horizontal
+                    +phone_a()
+                .p-icon 
+                    i.mr-3.far.fa-envelope
+                    +mail_a()
+        .container-fluid.container-form-search
+            .form-search 
+                .form-group
+                    input(type="text" class="form-control" placeholder="Tìm kiếm")
+                    button(type="button" class="icon-submit"): span.far.fa-search
+                

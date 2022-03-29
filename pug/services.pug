@@ -1,0 +1,70 @@
+extends template/template
+block vars
+    - title = 'Dịch Vụ FBV'
+    - menu_active = 'services'
+    - wrapper_class = ''
+    - wrapper_id = ''
+    - home_slider = false
+    - banner_top = true
+    - banner_image = 'banner-services.jpg'
+    - login = false
+    - bg_footer = 'https://cdn.pixabay.com/photo/2017/03/05/00/34/panorama-2117310_960_720.jpg'
+append breadcrumb 
+    +breadcrumb({}, title)
+block mainer
+    main.mainer
+        .container-fluid.py-5 
+            h2.tt-md.text-uppercase.text-center.text-secondary=title
+            .nav-responsive.my-45#nav-responsive
+                .nav-nowrap#nav-nowrap
+                    +a('', 'nav-item', 'Khảo sát, sửa chữa')
+                    +a('', 'nav-item active', 'Tư vấn kiến trúc')
+                    +a('', 'nav-item', 'Tư vấn thiết kế')
+                    +a('', 'nav-item', 'Thi công xây dựng')
+
+            script(src="css/plugins/nav-responsive.js")
+
+            .list-services.row
+                .col-md-6.col-lg-4.mb-5.wow.fadeInUp
+                    .block 
+                        +a('service-detail.html', 'absolute')
+                        .thumb-res.wide.rounded-4: +img('services/1.jpg')(class="fit-cover")
+                        .info 
+                            .tt.text-uppercase Tư vấn thiết kế trọn gói
+                            .desc Lorem Ipsum is simply dummy text of the printing and types indtr has been the Ipsum dummy
+                .col-md-6.col-lg-4.mb-5.wow.fadeInUp
+                    .block 
+                        +a('service-detail.html', 'absolute')
+                        .thumb-res.wide.rounded-4: +img('services/2.jpg')(class="fit-cover")
+                        .info 
+                            .tt.text-uppercase Tư vấn thiết kế nhà
+                            .desc Lorem Ipsum is simply dummy text of the printing and types indtr has been the Ipsum dummy
+                .col-md-6.col-lg-4.mb-5.wow.fadeInUp
+                    .block 
+                        +a('service-detail.html', 'absolute')
+                        .thumb-res.wide.rounded-4: +img('services/3.jpg')(class="fit-cover")
+                        .info 
+                            .tt.text-uppercase Tư vấn thiết kế căn hộ
+                            .desc Lorem Ipsum is simply dummy text of the printing and types indtr has been the Ipsum dummy
+                .col-md-6.col-lg-4.mb-5.wow.fadeInUp
+                    .block 
+                        +a('service-detail.html', 'absolute')
+                        .thumb-res.wide.rounded-4: +img('services/4.jpg')(class="fit-cover")
+                        .info 
+                            .tt.text-uppercase Tư vấn bản vẽ thiết kế
+                            .desc Lorem Ipsum is simply dummy text of the printing and types indtr has been the Ipsum dummy
+                .col-md-6.col-lg-4.mb-5.wow.fadeInUp
+                    .block 
+                        +a('service-detail.html', 'absolute')
+                        .thumb-res.wide.rounded-4: +img('services/5.jpg')(class="fit-cover")
+                        .info 
+                            .tt.text-uppercase Thi công xây dựng
+                            .desc Lorem Ipsum is simply dummy text of the printing and types indtr has been the Ipsum dummy
+                .col-md-6.col-lg-4.mb-5.wow.fadeInUp
+                    .block 
+                        +a('service-detail.html', 'absolute')
+                        .thumb-res.wide.rounded-4: +img('services/6.jpg')(class="fit-cover")
+                        .info 
+                            .tt.text-uppercase Dịch vụ thiết kế trọn gói
+                            .desc Lorem Ipsum is simply dummy text of the printing and types indtr has been the Ipsum dummy
+            +pagination2('my-3')

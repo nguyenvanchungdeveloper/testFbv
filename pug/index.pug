@@ -1,0 +1,153 @@
+extends template/template
+block vars
+    - title = 'Home'
+    - menu_active = 'index'
+    - wrapper_class = 'home-page'
+    - wrapper_id = 'home-page'
+    - home_slider = true
+    - banner_top = false
+    - banner_image = ''
+    - login = false
+    - bg_footer = 'https://www.bouygues-es.co.uk/sites/uk/files/2017-10/asset-management-buildings-web_0.jpg'
+block mainer
+    main.mainer
+        .container-fluid.section-projects.py-5.py-xl-6
+            h2.tt-lg.text-uppercase.tt-ss.text-secondary.text-center Dự án tiêu biểu 
+            .grid-projects.row.row-cols-2.row-cols-md-3.g-2.g-lg-4.mb-xl-3
+                .col.wow.fadeInUp: +pro-item('projects_01.jpg', 'Chung cư Opal Garden')
+                .col.wow.fadeInUp: +pro-item('projects_03.jpg', 'Dự án căn hộ High Intela Quận 8')
+                .col.wow.fadeInUp: +pro-item('projects_05.jpg', 'CĂN HỘ SAIGON INTELA BÌNH CHÁNH')
+                .col.wow.fadeInUp: +pro-item('projects_11.jpg', 'Chung cư Opal Garden')
+                .col.wow.fadeInUp: +pro-item('projects_13.jpg', 'Dự án căn hộ High Intela Quận 8')
+                .col.wow.fadeInUp: +pro-item('projects_15.jpg', 'CĂN HỘ SAIGON INTELA BÌNH CHÁNH')
+        .block-bg.bg-fixed.py-5.py-xl-6.section-services(style="background-image:url('css/skin/theme/block-1.jpg')")
+            .overlay-dark(style="--bg-overlay:#0364a3")
+            .container-fluid
+                h2.tt-lg.text-uppercase.tt-ss.text-secondary.text-center.text-white Dịch vụ fbv
+                .carousel-c1md3.carousel-services.mb-4
+                    .carousel-cell.wow.fadeInUp
+                        .block 
+                            +a('service-detail.html', 'absolute')
+                            .thumb-res.wide-lg.rounded
+                                +img('services/1.jpg')(class="fit-cover")
+                                .thumb-res-overlay.d-flex.align-items-center.justify-content-center.flex-column
+                                    .icon: +img('services/icon_service_01.png')
+                                    h3.tt.text-uppercase Khảo sát, sửa chữa
+                                    .desc Lorem Ipsum is simply dummy text of the printing and typesg indtrysum has been the Ipsum dummy
+                    .carousel-cell.wow.fadeInUp
+                        .block 
+                            +a('service-detail.html', 'absolute')
+                            .thumb-res.wide-lg.rounded
+                                +img('services/3.jpg')(class="fit-cover")
+                                .thumb-res-overlay.d-flex.align-items-center.justify-content-center.flex-column
+                                    .icon: +img('services/icon_service_02.png')
+                                    h3.tt.text-uppercase Tư vấn kiến trúc
+                                    .desc Lorem Ipsum is simply dummy text of the printing and typesg indtrysum has been the Ipsum dummy
+                    .carousel-cell.wow.fadeInUp
+                        .block 
+                            +a('service-detail.html', 'absolute')
+                            .thumb-res.wide-lg.rounded
+                                +img('services/2.jpg')(class="fit-cover")
+                                .thumb-res-overlay.d-flex.align-items-center.justify-content-center.flex-column
+                                    .icon: +img('services/icon_service_03.png')
+                                    h3.tt.text-uppercase Tư vấn thiết kế
+                                    .desc Lorem Ipsum is simply dummy text of the printing and typesg indtrysum has been the Ipsum dummy
+                    .carousel-cell.wow.fadeInUp
+                        .block 
+                            +a('service-detail.html', 'absolute')
+                            .thumb-res.wide-lg.rounded
+                                +img('services/4.jpg')(class="fit-cover")
+                                .thumb-res-overlay.d-flex.align-items-center.justify-content-center.flex-column
+                                    .icon: +img('services/icon_service_04.png')
+                                    h3.tt.text-uppercase Thi công xây dựng
+                                    .desc Lorem Ipsum is simply dummy text of the printing and typesg indtrysum has been the Ipsum dummy
+        .container-fluid.section-news.py-5.py-xl-6
+            h2.tt-lg.text-uppercase.tt-ss.text-secondary.text-center Tin tức nổi bật 
+            .home-grid-news.row.gx-4 
+                .news1.col-lg-5.wow.fadeInLeft
+                    .carousel-single
+                        .carousel-cell 
+                            .thumb-res.wide-lg.mb-0
+                                +a('news-detail.html', 'absolute') 
+                                +img('news/2.jpg')(class="fit-cover")
+                                .info.position-absolute
+                                    .badge.badge-primary.rounded-1.text-uppercase Tin công trình
+                                    .tt-xs.mb-0 FBV tổ chức lễ tổng kết HĐ SXKD 2020 & giao chỉ tiêu 2021
+                        .carousel-cell 
+                            .thumb-res.wide-lg.mb-0
+                                +a('news-detail.html', 'absolute') 
+                                +img('news/1.jpg')(class="fit-cover")
+                                .info.position-absolute
+                                    .badge.badge-primary.rounded-1.text-uppercase Tin công trình
+                                    .tt-xs.mb-0 FBV tổ chức lễ tổng kết HĐ SXKD 2020 & giao chỉ tiêu 2021
+                        .carousel-cell 
+                            .thumb-res.wide-lg.mb-0
+                                +a('news-detail.html', 'absolute') 
+                                +img('news/3.jpg')(class="fit-cover")
+                                .info.position-absolute
+                                    .badge.badge-primary.rounded-1.text-uppercase Tin công trình
+                                    .tt-xs.mb-0 FBV tổ chức lễ tổng kết HĐ SXKD 2020 & giao chỉ tiêu 2021
+                .news2.col-md-6.col-lg-4.wow.fadeInRight
+                    .list-news-h 
+                        .block.d-flex
+                            +a('news-detail.html', 'absolute')
+                            .thumb-res.thumb-sm: +img('news/2.jpg')(class="fit-cover")
+                            .info 
+                                .badge.bg-primary.rounded-1.px-2.text-uppercase Tin công ty
+                                .tt.mb-0 Khẩn trương xây dựng nghị định về chính quyền đô thị Tp.HCM
+                        .block.d-flex
+                            +a('news-detail.html', 'absolute')
+                            .thumb-res.thumb-sm: +img('news/1.jpg')(class="fit-cover")
+                            .info 
+                                .badge.bg-primary.rounded-1.px-2.text-uppercase Tin công ty
+                                .tt.mb-0 Khẩn trương xây dựng nghị định về chính quyền đô thị Tp.HCM
+                        .block.d-flex
+                            +a('news-detail.html', 'absolute')
+                            .thumb-res.thumb-sm: +img('news/3.jpg')(class="fit-cover")
+                            .info 
+                                .badge.bg-primary.rounded-1.px-2.text-uppercase Tin công ty
+                                .tt.mb-0 Khẩn trương xây dựng nghị định về chính quyền đô thị Tp.HCM
+                        .block.d-flex
+                            +a('news-detail.html', 'absolute')
+                            .thumb-res.thumb-sm: +img('news/4.jpg')(class="fit-cover")
+                            .info 
+                                .badge.bg-primary.rounded-1.px-2.text-uppercase Tin công ty
+                                .tt.mb-0 Khẩn trương xây dựng nghị định về chính quyền đô thị Tp.HCM
+                .news3.col-md-6.col-lg-3.wow.fadeInRight
+                    .news-lg
+                        .thumb-res.wide 
+                            +a('news-detail.html', 'absolute')
+                            +img('news/3.jpg')(class="fit-cover")
+                            .badge.bg-danger.rounded-0.text-uppercase Tin thị trường
+                        .tt-xs QUỐC TẾ PHỤ NỮ - 08/03/2019
+                    .news-trends
+                        .block.d-flex
+                            +a('news-detail.html', 'absolute')
+                            .avatar.bg-danger.fw-bold.mr-2.text-white #1
+                            .tt.mb-0 Chương trình khám sức khỏe định kỳ cho CBCNV FBV 2019
+                        .block.d-flex
+                            +a('news-detail.html', 'absolute')
+                            .avatar.bg-danger.fw-bold.mr-2.text-white #2
+                            .tt.mb-0 Họp truyền thông văn hóa Doanh nghiệp & chuyển giao học liệu e-learning
+                        .block.d-flex
+                            +a('news-detail.html', 'absolute')
+                            .avatar.bg-danger.fw-bold.mr-2.text-white #3
+                            .tt.mb-0 Hợp sơ kết hoạt động kinh doanh 6 tháng đầu năm và kế hoạch
+        .section-customer.py-5
+            .container-fluid.wow.fadeInUp
+                h2.tt-lg.text-uppercase.tt-ss.text-secondary.text-center Khách hàng & Đối tác
+                .carousel-logo 
+                    .carousel-cell 
+                        +a('#', 'thumb-res wide mb-0'): +img('customer/1.jpg') 
+                    .carousel-cell 
+                        +a('#', 'thumb-res wide mb-0'): +img('customer/2.jpg') 
+                    .carousel-cell 
+                        +a('#', 'thumb-res wide mb-0'): +img('customer/3.jpg') 
+                    .carousel-cell 
+                        +a('#', 'thumb-res wide mb-0'): +img('customer/4.jpg') 
+                    .carousel-cell 
+                        +a('#', 'thumb-res wide mb-0'): +img('customer/5.jpg') 
+                    .carousel-cell 
+                        +a('#', 'thumb-res wide mb-0'): +img('customer/6.jpg')
+                    .carousel-cell 
+                        +a('#', 'thumb-res wide mb-0'): +img('customer/7.png')

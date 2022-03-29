@@ -1,0 +1,28 @@
+//- - news1 = "FBV TỔ CHỨC LỄ TỔNG KẾT HĐ SXKD 2020 & GIAO CHỈ TIÊU 2021."
+//- - news2 = "Paralympic 'Rising Phoenix' Netflix documentary will make you laugh and cry"
+//- - news3 = "'Black Widow' streaming numbers fire up the ScarJo vs Disney lawsuit"
+//- - news4 = "From 'air-pocalypse' to blue skies: Rare victory for public dissent in Beijing"
+//- - news5 = "Josephine Baker will be the first Black woman buried at the Panthéon in Paris"
+//- - news6 = "US golfer wins first stage of PGA Tour's finale, his first victory in 1,975 days"
+
+- news1 = "FBV TỔ CHỨC LỄ TỔNG KẾT HĐ SXKD 2020 & GIAO CHỈ TIÊU 2021."
+- news2 = "FBV TỔ CHỨC HUẤN LUYỆN ATLĐ TẠI CT SAIGON INTELA & ECO XUÂN"
+- news3 = "DU LỊCH 2021 - FBV HÀNH TRÌNH KỈ NIỆM 10 NĂM"
+- news4 = "CHÚC MỪNG SINH NHẬT LẦN THỨ 17 TẬP ĐOÀN ĐẤT XANH GROUP"
+- news5 = "FBV TỔ CHỨC THÀNH CÔNG “HỘI NGHỊ TRI ÂN & CHÀO ĐÓN NĂM MỚI..."
+- news6 = "FBV TỔ CHỨC LỄ TỔNG KẾT HĐ SXKD 2020 & GIAO CHỈ TIÊU 2021."
+
+- desc1 = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+- desc2 = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+- desc3 = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+- desc4 = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+- desc5 = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+- desc6 = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+
+mixin news-item(image, tt, desc)
+    .block
+        +a('news-detail.html', 'absolute')
+        .thumb-res.wide: +img('news/'+image)(class="fit-cover")
+        .info 
+            .tt=tt
+            .desc=desc

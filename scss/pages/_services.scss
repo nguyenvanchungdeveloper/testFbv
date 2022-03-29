@@ -1,0 +1,42 @@
+.list-services {
+    .info {
+        padding: 0 1.125rem;
+    }
+    .desc {
+        color: $desc;
+        @include ellips(3);
+    }
+    .tt {
+        color: darken($primary, 15%);
+    }
+    --tt: 18px;
+    
+    .thumb-res,
+    .info {
+        transition: all 0.4s ease;
+    }
+    .block:hover {
+        .tt {
+            color: $secondary;
+        }
+        .info {
+            transform: translateY(4px);
+        }
+        .thumb-res {
+            box-shadow: 0 7px 30px -7px rgba(#000,.1);
+            transform: translateY(-3px);
+        }
+    }
+}
+.servicesIntroduce{
+    padding-top: 10px !important;
+}
+.newCustom{
+    margin: 10px auto 12px !important;
+}
+.indicate{
+    h2{
+        margin-bottom: 0;
+    }
+
+}

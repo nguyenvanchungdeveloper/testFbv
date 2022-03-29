@@ -1,0 +1,56 @@
+extends template/template
+block vars
+    - title = 'Thư viện'
+    - menu_active = 'gallery'
+    - wrapper_class = ''
+    - wrapper_id = ''
+    - home_slider = false
+    - banner_top = true
+    - banner_image = 'banner-gallery.jpg'
+    - login = false
+
+append breadcrumb 
+    +breadcrumb({'gallery.html': title}, 'Thư viện Hình ảnh')
+block mainer
+    main.mainer
+        .container-fluid.py-5 
+            h2.text-center.tt-sm.text-uppercase Thư viện Hình ảnh
+            .bg-danger.d-width.mx-auto.mb-4(width="30" height="4")
+            .desc.text-center.fs-18.mb-4 Hình ảnh TeamBuilding ABC tại Đà Nẵng
+            .carousel-gallery 
+                .carousel-cell 
+                    +a('css/skin/gallery/9.jpg', 'block')(data-fancybox="album01"): +img('gallery/9.jpg')
+                .carousel-cell 
+                    +a('css/skin/gallery/2.jpg', 'block')(data-fancybox="album01"): +img('gallery/2.jpg')
+                .carousel-cell 
+                    +a('css/skin/gallery/3.jpg', 'block')(data-fancybox="album01"): +img('gallery/3.jpg')
+                .carousel-cell 
+                    +a('css/skin/gallery/4.jpg', 'block')(data-fancybox="album01"): +img('gallery/4.jpg')
+                .carousel-cell 
+                    +a('css/skin/gallery/5.jpg', 'block')(data-fancybox="album01"): +img('gallery/5.jpg')
+                .carousel-cell 
+                    +a('css/skin/gallery/6.jpg', 'block')(data-fancybox="album01"): +img('gallery/6.jpg')
+                .carousel-cell 
+                    +a('css/skin/gallery/7.jpg', 'block')(data-fancybox="album01"): +img('gallery/7.jpg')
+                .carousel-cell 
+                    +a('css/skin/gallery/8.jpg', 'block')(data-fancybox="album01"): +img('gallery/8.jpg')
+                .carousel-cell 
+                    +a('css/skin/gallery/1.jpg', 'block')(data-fancybox="album01"): +img('gallery/1.jpg')
+
+            .related-post.my-45.position-relative.pt-5
+                .overlay-fit.gradient
+                .d-flex.align-items-center.justify-content-between.mb-3
+                    .tt-xs.text-uppercase.my-2 Xem Album khác
+                    span.border-top.mx-3.flex-fill
+                    +a('gallery.html', 'link-more text-decoration-none')
+                        | Xem thêm
+                        i.far.fa-chevron-right
+
+                .list-photos.row.row-cols-1.row-cols-sm-2.row-cols-md-4.gy-5
+                    .col: +gallery-item('2.jpg', 'Albumb Team Building HCM')
+                    .col: +gallery-item('3.jpg', 'Albumb Team Building Hà Nội')
+                    .col: +gallery-item('4.jpg', 'Albumb Team Building Huế')
+                    .col: +gallery-item('6.jpg', 'Albumb Team Building Đà Năng')
+
+append scripts
+    +fancybox()
