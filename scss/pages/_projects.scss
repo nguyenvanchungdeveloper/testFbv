@@ -33,7 +33,7 @@
         font-size: 15px;
         background: rgba($primary,.15);
         color: darken($primary, 15%);
-        padding: .5rem 1.125rem;
+        padding: .4rem 1.125rem;
         &:focus {
             background: #fff;
         }
@@ -204,4 +204,15 @@
             padding-right: 4%;
         }
     }
+}
+
+// Custom 
+.projectIntroduce{
+    padding-top: 8px !important;
+    &__title{
+        margin-bottom: 0px;
+    }
+}
+.projectCustom{
+    margin: 8px auto 10px !important;
 }

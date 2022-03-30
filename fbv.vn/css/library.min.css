@@ -28824,7 +28824,7 @@ html.menu-open {
   font-size: 15px;
   background: rgba(1, 114, 188, 0.15);
   color: #014470;
-  padding: 0.5rem 1.125rem;
+  padding: 0.4rem 1.125rem;
 }
 .nav-filter .dropdown-toggle:focus {
   background: #fff;
@@ -28992,6 +28992,17 @@ html.menu-open {
     padding-right: 4%;
   }
 }
+.projectIntroduce {
+  padding-top: 8px !important;
+}
+.projectIntroduce__title {
+  margin-bottom: 0px;
+}
+
+.projectCustom {
+  margin: 8px auto 10px !important;
+}
+
 .list-photos .absolute, .list-photos .grid-projects .thumb-res-overlay, .grid-projects .list-photos .thumb-res-overlay, .list-photos .carousel-services .thumb-res-overlay, .carousel-services .list-photos .thumb-res-overlay,
 .list-photos .fit-cover,
 .list-photos .thumb-res,
