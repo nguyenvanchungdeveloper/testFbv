@@ -9,7 +9,7 @@
     }
 
     .container {
-        min-height: var(--banner-height, 160px);
+        min-height: var(--banner-height, 220px);
         position: relative;
         z-index: 10;
         display: flex;
@@ -43,12 +43,12 @@
 }
 @include media-breakpoint-up(md) {
     .banner-lg {
-        --banner-height: calc(230px+37px);
+        --banner-height: calc(220px);
         --tt-md: calc(20px + 1.05vw);
     }
 }
 @include media-breakpoint-up(xl) {
     .banner-lg {
-        --banner-height:calc(290px + 37px);
+        --banner-height:calc(290px + 140px);
     }
 }

@@ -136,6 +136,7 @@
 
 // Home slider
 .home-slider {
+	// display: none;
     .carousel-cell {
         width: 100%;
 		overflow: hidden;
@@ -224,6 +225,7 @@
 @include media-breakpoint-up(md) {
 	.home-slider {
 		--slide-height: calc(720 / 1920 * 100%);
+		// border: 1px solid red;
 		--tt-lg: 2rem;
 		--desc-font-size: 1.075rem;
 		--layer-margin: 1.125rem;

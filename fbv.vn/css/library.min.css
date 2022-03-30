@@ -28027,7 +28027,7 @@ html.menu-open {
   background-color: rgba(0, 0, 0, 0.2);
 }
 .banner-lg .container {
-  min-height: var(--banner-height, 160px);
+  min-height: var(--banner-height, 220px);
   position: relative;
   z-index: 10;
   display: flex;
@@ -28062,13 +28062,13 @@ html.menu-open {
 
 @media (min-width: 768px) {
   .banner-lg {
-    --banner-height: calc(230px+37px);
+    --banner-height: calc(220px);
     --tt-md: calc(20px + 1.05vw);
   }
 }
 @media (min-width: 1200px) {
   .banner-lg {
-    --banner-height:calc(290px + 37px);
+    --banner-height:calc(290px + 140px);
   }
 }
 .menu-vertical {
